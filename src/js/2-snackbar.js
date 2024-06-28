@@ -6,14 +6,14 @@ function createPromise(position, delay, state) {
     setTimeout(() => {
       if (state === 'fulfilled') {
         iziToast.success({
-          title: 'Успіх',
-          message: `✅ Виконано обіцянку за ${delay}мс`,
+          title: 'Success',
+          message: `✅ Fulfilled promise in ${delay}ms`,
         });
         resolve();
       } else {
         iziToast.error({
-          title: 'Помилка',
-          message: `❌ Відхилено обіцянку за ${delay}мс`,
+          title: 'Error',
+          message: `❌ Rejected promise in ${delay}ms`,
         });
         reject();
       }
